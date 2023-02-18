@@ -1,0 +1,123 @@
+@import '../../style.scss';
+
+
+.rightbar{
+    flex: 3;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    background-color: whitesmoke;
+
+    @include mobile{
+        display: none;
+    }
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .container{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .item{
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            border-radius: 5px;
+
+            span{
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-weight: 600;
+                cursor: default;
+            }
+
+
+
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 5px 0px;
+
+                p{
+                    color: gray;
+                    font-size: 12px;
+                    span{
+                        color:black ;
+                        font-size: 16px;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+                
+                .userInfo{
+                    display: flex;
+                    gap: 10px;
+                    cursor: pointer;
+                    align-items: center;
+                    flex-direction: row;
+                    position: relative;
+
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    .online{
+                        background-color: limegreen;
+                        height: 12px;
+                        width: 12px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                    }
+                    span{
+                        font-size: 16px;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+ 
+
+                }
+                .buttons{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    button{
+                        cursor: pointer;
+                        outline: none;
+                        border: 1px solid lightgray;
+                        padding: 5px;
+                        color: white;
+                        border-radius: 3px;
+
+                        &:first-child{
+                            background-color: #5271ff;
+                        }
+                        &:last-child{
+                            background-color: #f0544f;
+                        }
+                        &:first-child:hover{
+                            background-color: #3c5fff;
+                        }
+                        &:last-child:hover{
+                            background-color: #ef3b35;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

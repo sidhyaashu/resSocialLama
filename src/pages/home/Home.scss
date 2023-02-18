@@ -1,0 +1,12 @@
+@import '../../style.scss';
+
+.home{
+    background-color: whitesmoke;
+    padding: 20px 70px;
+    margin-bottom: 120px;
+    
+
+    @include mobile {
+        padding: 10px;
+    }
+}

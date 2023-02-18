@@ -1,0 +1,88 @@
+@import '../../style.scss';
+
+.post{
+    -webkit-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.75); 
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+
+    .container{
+        padding: 20px;
+
+        .user{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .userInfo{
+
+                img{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            
+                .details{
+                    .nameanddate{
+                        display: flex;
+                        flex-direction: column;
+                        .name{
+                            font-size: 14px;
+                            font-weight: 500;
+
+                        }
+                        .date{
+                            font-size: 10px;
+                            color: gray;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .content{
+            margin: 10px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 10px;
+            border-top: 1px solid lightgray;
+            padding-top: 5px;
+
+            img{
+                max-height: 400px;
+                object-fit: contain;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+        .info{
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+
+            @include mobile{
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+
+                span{
+                    @include mobile{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

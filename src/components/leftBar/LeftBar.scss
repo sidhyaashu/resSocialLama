@@ -1,0 +1,74 @@
+@import '../../style.scss';
+
+
+.leftbar{
+    background-color: whitesmoke;
+    flex: 2;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow: scroll;
+    scroll-behavior: smooth;
+
+    @include mobile {
+        display: none;
+    }
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .container{
+        padding: 20px;
+        hr{
+            margin: 20px 0px;
+            border: none;
+            height: 0.5px;
+            background-color: lightgray;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span{
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .user{
+                // display: "flex";
+                // align-items: "center";
+                // gap: "10px";
+                // cursor: "pointer";
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span{
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+            .item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+            }
+        }
+    
+    }
+}

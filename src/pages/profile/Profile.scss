@@ -1,0 +1,133 @@
+@import '../../style.scss';
+
+.profile{
+    background-color:whitesmoke;
+
+    .images{
+        height: 250px;
+        width: 100%;
+        position: relative;
+
+
+        .cover{
+            width: 100%;
+            height: 100%;
+
+            @include mobile{
+                height: 80%;
+            }
+
+        }
+        .profilepic{
+            height: 170px;
+            width: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 150px;
+
+            @include mobile{
+                height: 120px;
+                width: 120px;
+            }
+        }
+    }
+
+    .profileContainer{
+        padding: 20px 70px;
+
+        @include mobile{
+            margin-top: 25px;
+            padding: 10px 10px;
+        }
+
+        .uifo{
+            height: 220px;
+            border-radius: 20px;
+            background-color: white;
+            padding: 50px;
+            -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+           -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include mobile{
+                flex-direction: column;
+                height: 30vh;
+                padding: 10px 10px 0 0;
+            }
+
+            .left{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+            }
+            .center{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 14px;
+
+                .name{
+                    font-weight: 500;
+                    font-size: 22px;
+                }
+                .info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 15px;
+                   
+                    .items{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+
+                        span{
+                            font-weight: 500;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                button{
+                    padding: 10px;
+                    width: 120px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    border: 0;
+                    font-size: 14px;
+                    font-weight: bold;
+                    background-color: blue;
+                    color: white;
+                }
+                
+            }
+            .right{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+.bottom_post{
+    padding:10px 70px;
+    background-color: whitesmoke;
+
+    @include mobile{
+        padding:10px;
+    }
+}
